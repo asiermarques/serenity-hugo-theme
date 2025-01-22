@@ -9,7 +9,7 @@
       </aside>
       <div class="col col-lg-8 offset-lg-1">
         <section class="article-list">
-          {{ $posts := where .Site.RegularPages "Section" "posts" }}
+          {{ $posts := where .Site.RegularPages "Type" "post" }}
           {{ $paginator := .Paginate $posts }}
           
           {{ range $paginator.Pages }}
