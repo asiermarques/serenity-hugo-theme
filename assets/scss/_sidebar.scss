@@ -1,7 +1,7 @@
 aside {
-  margin: $space/2 0 0 0;
+  margin-top: $space/2!important;
   @include media-breakpoint-up(lg) {
-    margin: $space 0;
+    margin-top: $space!important;
   }
   header a{
     color: $black;

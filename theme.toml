@@ -13,6 +13,12 @@ demosite = 'https://blog.asiermarques.com'
 tags = ['blog', 'minimalistic']
 features = []
 
+
+# Add pagination configuration
+paginate = 5  # Number of posts per page
+paginatePath = "page"
+
+
 # If the theme has a single author
 [author]
   name = 'Asier Marques'
