@@ -1,8 +1,23 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1>{{ .Title }}</h1>
+        {{ .Content }}
+      </div>
+    </div>
+    <div class="row">
+        <aside class="col col-lg-3">
+          {{ partial "sidebar.html" . }}
+        </aside>
+        <div class="col col-lg-8 offset-lg-1">
+          <section class="article-list">
+            
+            {{ range .Pages }}
+              {{ partial "articleInList.html" . }}
+            {{ end }}
+        </section>
+        </div>
+    </div>
+  </div>
 {{ end }}

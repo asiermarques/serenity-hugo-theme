@@ -1,0 +1,9 @@
+<article>
+    <a href="{{ .RelPermalink }}" title="{{ .LinkTitle }}">
+      <small class="date">{{ .Date.Format "02-01-2006" }}</small>
+      <h2>{{ .LinkTitle }}</h2>
+      {{ with .Params.description }}
+      <p>{{ . }}</p>
+      {{ end }}
+    </a>
+  </article>

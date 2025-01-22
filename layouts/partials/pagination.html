@@ -1,0 +1,18 @@
+{{ if or .paginator.HasPrev .paginator.HasNext }}
+    <nav class="pagination row">
+    <div class="col-6 prev">
+        {{ if .paginator.HasPrev }}
+        <a href="{{ .paginator.Prev.URL }}" rel="prev">
+            &larr; Anteriores
+        </a>
+        {{ end }}</div>
+
+    <div class="col-6 next">
+        {{ if .paginator.HasNext }}
+        <a href="{{ .paginator.Next.URL }}" rel="next">
+            Siguientes &rarr;
+        </a>
+        {{ end }}
+    </div>
+    </nav>
+{{ end }}

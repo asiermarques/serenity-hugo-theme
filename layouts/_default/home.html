@@ -1,51 +1,21 @@
-
-
 {{ define "main" }}
-
 <div class="container">
   <div class="row">
-      <aside class="col col-lg-3">
+      <aside class="col col-lg-2 offset-lg-1">
         {{ partial "sidebar.html" . }}
       </aside>
-      <div class="col col-lg-8 offset-lg-1">
+      <div class="col col-lg-7 offset-lg-1">
         <section class="article-list">
           {{ $posts := where .Site.RegularPages "Type" "post" }}
           {{ $paginator := .Paginate $posts }}
           
           {{ range $paginator.Pages }}
-          <article>
-            <a href="{{ .RelPermalink }}" title="{{ .LinkTitle }}">
-              <small class="date">{{ .Date.Format "02-01-2006" }}</small>
-              <h2>{{ .LinkTitle }}</h2>
-              {{ with .Params.description }}
-              <p>{{ . }}</p>
-              {{ end }}
-            </a>
-          </article>
+            {{ partial "articleInList.html" . }}
           {{ end }}
-      
-          {{ if or $paginator.HasPrev $paginator.HasNext }}
-          <nav class="pagination row">
-            <div class="col-6 prev">
-              {{ if $paginator.HasPrev }}
-              <a href="{{ $paginator.Prev.URL }}" rel="prev">
-                  &larr; Previous
-              </a>
-              {{ end }}</div>
-      
-            <div class="col-6 next">
-              {{ if $paginator.HasNext }}
-              <a href="{{ $paginator.Next.URL }}" rel="next">
-                  Next &rarr;
-              </a>
-              {{ end }}
-            </div>
-          </nav>
-          {{ end }}
+
+          {{ partial "pagination.html" (dict "paginator" $paginator) }}
       </section>
       </div>
   </div>
 </div>
-
-
 {{ end }}

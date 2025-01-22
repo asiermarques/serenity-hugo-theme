@@ -4,6 +4,7 @@ title = 'Serenity theme'
 
 [params]
   description = 'Blog personal y reflexiones sobre gestión de ingeniería de software.'
+  author = 'Asier Marqués'
 
 [[menus.main]]
 name = 'Home'
