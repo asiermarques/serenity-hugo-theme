@@ -1,6 +1,12 @@
+
 <article>
     <a href="{{ .RelPermalink }}" title="{{ .LinkTitle }}">
       <small class="date">{{ .Date.Format "02-01-2006" }}</small>
+      {{ with resources.Get .Params.coverImage }}
+      {{ with .Resize (printf "%dx webp q70 lanczos" .Width) }}
+          <section class="cover" style="background-image:url({{.Permalink}})"></section>
+      {{end}}
+      {{end}}
       <h2>{{ .LinkTitle }}</h2>
       {{ with .Params.description }}
       <p>{{ . }}</p>
