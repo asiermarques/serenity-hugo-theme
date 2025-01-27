@@ -6,12 +6,11 @@ title = 'Serenity theme'
   description = 'Blog personal y reflexiones sobre gestión de ingeniería de software.'
   author = 'Asier Marqués'
   
-  # Method 1: Using nested table syntax
   [params.social]
   github = 'https://github.com/asiermarques'
   linkedin = 'https://www.linkedin.com/in/asier-marques/'
   instagram = 'https://www.instagram.com/asiermarques/'
-  mail = 'mailto:asiermarques@gmail.com'
+  mail = 'mailto:asiermarques'
   bluesky = 'https://bsky.app/profile/asiermarques.com'
   x = ''
 
