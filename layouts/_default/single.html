@@ -29,6 +29,10 @@
         {{ .Content }}
       </section>
     </article>
+    <section class="author">
+      <p>{{ .Site.Title | safeHTML }}<br> {{ .Site.Params.description | safeHTML }}</p>
+      {{ partial "social.html" . }}
+    </section>
     </div>
   </section>
 </div>
