@@ -1,6 +1,7 @@
 /* Generated using: hugo gen chromastyles --style=github-dark */
 
 /* Background */ .bg { color:#e6edf3;background-color:#0d1117; }
+.highlight { margin-bottom:50px; display:block; }
 /* PreWrapper */ .chroma { color:#e6edf3;background-color:#0d1117; padding: 14px }
 /* Other */ .chroma .x {  }
 /* Error */ .chroma .err { color:#f85149 }
