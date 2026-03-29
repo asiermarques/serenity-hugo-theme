@@ -32,4 +32,4 @@ weight = 30
 [markup]
   [markup.highlight]
     noClasses = false
-    style = 'monokai'ç
+    style = 'monokai'
