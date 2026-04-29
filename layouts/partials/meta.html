@@ -53,7 +53,7 @@
 
 
 <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700|Merriweather&amp;display=swap" rel="stylesheet">
-{{ $style := resources.Get "scss/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+{{ $style := resources.Get "scss/main.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 {{ $syntax := resources.Get "css/syntax.css" | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $syntax.RelPermalink }}" integrity="{{ $syntax.Data.Integrity }}">
