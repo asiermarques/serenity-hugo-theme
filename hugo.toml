@@ -5,6 +5,7 @@ title = 'Serenity theme'
 [params]
   description = 'Blog personal y reflexiones sobre gestión de ingeniería de software.'
   author = 'Asier Marqués'
+  rssFull = false
   
   [params.social]
   github = 'https://github.com/asiermarques'
